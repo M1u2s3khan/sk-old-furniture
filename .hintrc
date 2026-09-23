@@ -1,0 +1,33 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "inset",
+          "-webkit-overflow-scrolling",
+          "aspect-ratio",
+          "scroll-margin-top",
+          "scroll-behavior",
+          "scroll-behavior: smooth"
+        ]
+      }
+    ],
+    "no-inline-styles": "off",
+    "meta-viewport": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "meta[name=theme-color]",
+          "img[loading]",
+          "img[decoding]"
+        ]
+      }
+    ]
+  }
+}
