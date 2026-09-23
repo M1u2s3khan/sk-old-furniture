@@ -935,3 +935,58 @@
 }
 
 /* page banner css close */
+/* Mobile sticky bar - show only on mobile */
+.mobile-bar {
+  display: none;
+}
+
+@media (max-width: 991.98px) {
+  .mobile-bar {
+    display: flex !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    background: #fff;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.12);
+    padding: 8px 12px;
+    gap: 8px;
+    /* iOS safe area */
+    padding-bottom: calc(8px + env(safe-area-inset-bottom));
+  }
+  
+  .mobile-bar .mb-call,
+  .mobile-bar .mb-wa {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .mobile-bar .mb-call {
+    background: #b8512e;
+    color: #fff;
+  }
+  
+  .mobile-bar .mb-wa {
+    background: #25d366;
+    color: #fff;
+  }
+  
+  /* Add body padding so content isn't hidden */
+  body {
+    padding-bottom: 70px;
+  }
+  
+  /* Hide FAB on mobile since sticky bar exists */
+  .fab-stack {
+    display: none;
+  }
+}
